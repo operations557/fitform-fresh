@@ -16,6 +16,11 @@ export default function Footer() {
           <Link href="/#how" className="block text-brand-white/80 hover:text-brand-gold">How to Order</Link>
         </div>
         <div className="text-sm space-y-2">
+          <div className="eyebrow mb-3">Legal</div>
+          <Link href="/privacy" className="block text-brand-white/80 hover:text-brand-gold">Privacy Policy</Link>
+          <Link href="/terms" className="block text-brand-white/80 hover:text-brand-gold">Terms of Service</Link>
+        </div>
+        <div className="text-sm space-y-2">
           <div className="eyebrow mb-3">Contact</div>
           <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="block text-brand-white/80 hover:text-brand-gold">WhatsApp: +27 77 356 1532</a>
           <a href={`mailto:${EMAIL}`} className="block text-brand-white/80 hover:text-brand-gold">{EMAIL}</a>
@@ -23,7 +28,13 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-brand-border">
-        <div className="max-w-7xl mx-auto px-5 md:px-10 py-5 text-[11px] text-brand-grey font-mono">© 2026 Fitform (Pty) Ltd. All rights reserved.</div>
+        <div className="max-w-7xl mx-auto px-5 md:px-10 py-5 text-[11px] text-brand-grey font-mono flex justify-between items-center">
+          <span>© 2026 Fitform (Pty) Ltd. All rights reserved.</span>
+          <div className="flex gap-4 text-[11px]">
+            <Link href="/privacy" className="hover:text-brand-gold transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-brand-gold transition">Terms</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
