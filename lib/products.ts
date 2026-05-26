@@ -43,5 +43,5 @@ export const products: Product[] = [
 ];
 
 export function priceFormat(p: number) {
-  return \`R \${p.toFixed(2)}\`;
+  return 'R ' + p.toFixed(2);
 }
