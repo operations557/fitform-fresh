@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
   --brand-black: #050b08;
   --brand-dark: #081711;
   --brand-forest: #0d2818;
@@ -20,9 +24,14 @@
 html, body {
   background: var(--brand-black);
   color: var(--brand-white);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
 
 ::selection { background: var(--brand-gold); color: var(--brand-black); }
 
@@ -70,3 +79,6 @@ html, body {
   color: var(--brand-gold);
   text-transform: uppercase;
 }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
